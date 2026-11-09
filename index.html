@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Portfolio</title>
+
+  <script>
+    // Tandai JS aktif. Kalau script.js gagal jalan dalam 4 detik, semua konten tampil biasa.
+    (function () {
+      var r = document.documentElement;
+      r.classList.add('js');
+      setTimeout(function () {
+        if (!r.classList.contains('ready')) r.classList.remove('js');
+      }, 4000);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="img/foto-1.png">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="nav">
+  <div class="pill">
+
+    <button class="lang" id="lang" type="button" aria-label="Ganti bahasa">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>
+      </svg>
+      <span id="langlbl">ID</span>
+    </button>
+
+    <a class="logo" href="#beranda"><span class="g">Porto</span>folio</a>
+
+    <nav class="links" aria-label="Navigasi utama">
+      <a href="#beranda" data-i="nb">Beranda</a>
+      <a href="#tentang" data-i="nt">Tentang</a>
+      <a href="#proyek" data-i="np">Proyek</a>
+      <a href="#pengalaman" data-i="ne">Pengalaman</a>
+      <!-- <a href="#konten" data-i="nd">Konten</a> -->
+      <a href="#kontak" data-i="nk">Kontak</a>
+    </nav>
+
+    <button class="theme" id="theme" aria-label="Ganti tema" type="button">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+      </svg>
+    </button>
+
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="drop" type="button">
+      Menu
+      <span class="dot">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <path d="M5 8h14M9 16h10"/>
+        </svg>
+      </span>
+    </button>
+
+  </div>
+
+  <!-- Dropdown menu (HP) -->
+  <div class="drop" id="drop">
+    <a href="#beranda" data-i="nb">Beranda</a>
+    <a href="#tentang" data-i="nt">Tentang</a>
+    <a href="#proyek" data-i="np">Proyek</a>
+    <a href="#pengalaman" data-i="ne">Pengalaman</a>
+    <!-- <a href="#konten" data-i="nd">Konten</a> -->
+    <a href="#kontak" data-i="nk">Kontak</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== BERANDA ===================== -->
+  <section class="hero" id="beranda">
+    <div>
+      <small data-i="hi">HALO, SAYA</small>
+      <h1>Milda Maulida</h1>
+      <p class="role">
+        <span data-i="rl">Seorang</span><br>
+        <strong>Aspiring Instructional Designer</strong>
+      </p>
+      <p class="bio" data-i="bio">Saya menggabungkan pengalaman di bidang pendidikan, desain pembelajaran, dan teknologi untuk menciptakan pengalaman belajar digital yang interaktif dan bermakna.</p>
+      <div class="cta">
+        <a class="btn main has-ic" href="#proyek">
+          <span data-i="b1">Lihat Proyek</span>
+          <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17 17 7M8 7h9v9"/>
+          </svg>
+        </a>
+        <a class="btn" href="#kontak" data-i="b2">Kontak Saya</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="ph">
+        <img src="img/foto-1.png" alt="Foto Saya" decoding="async" fetchpriority="high">
+      </div>
+      <div class="name">Milda Maulida<span>Learning Designer</span></div>
+      <div class="chat">
+        <i><img src="img/foto-1.png" alt="" onerror="this.remove()"></i>
+        <div>@maulidamilda_<em>Online</em></div>
+        <a href="#kontak">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TENTANG ===================== -->
+  <section class="blk about" id="tentang">
+    <div class="about-grid">
+      <div class="polaroid">
+        <div class="ph">
+          <img src="img/foto-3.jpeg" alt="Foto about" decoding="async">
+        </div>
+      </div>
+      <div class="about-text">
+        <small data-i="al">TENTANG</small>
+        <h2 data-i="at">Mengetahui Siapa Saya</h2>
+        <p class="bio" data-i="ab">Saya adalah lulusan Sarjana Pendidikan Guru Sekolah Dasar yang tidak berhenti pada mengajar, tetapi juga tertarik pada bagaimana sebuah pengalaman belajar dirancang dan diwujudkan melalui teknologi. Berbekal pengalaman mengajar dan pembelajaran mandiri di bidang web development, saya telah membangun beberapa web pembelajaran sebagai proyek pribadi. Saat ini saya berfokus mengembangkan kemampuan di bidang instructional design dan EdTech, dengan ketertarikan khusus pada digital learning dan teknologi yang dapat membuat pembelajaran lebih interaktif.</p>
+        <a class="btn main has-ic" href="cv/CV_MildaMaulida.pdf" download="CV_MildaMaulida.pdf">
+          <svg class="dl" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>
+          </svg>
+          <span data-i="ak">Unduh CV</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROYEK ===================== -->
+  <section class="blk" id="proyek">
+    <small data-i="wl">PROYEK MANDIRI</small>
+    <h2 data-i="wt">Apa Yang Saya Buat</h2>
+    <p class="bio" data-i="ws">Berawal dari rasa penasaran, tumbuh menjadi sebuah karya. Setiap proyek menjadi ruang bagi saya untuk mengeksplorasi ide, mengasah kemampuan, dan mengubah apa yang saya pelajari menjadi sesuatu yang nyata dan bermakna.</p>
+
+    <div class="carousel" id="carousel">
+      <div class="car-track" id="track"></div>
+    </div>
+
+    <div class="car-info">
+      <h3 id="carTitle"></h3>
+      <p id="carDesc" class="bio"></p>
+      <a href="#" id="carLink" class="btn has-ic">
+        <span data-i="vp">Lihat Proyek</span>
+        <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 17 17 7M8 7h9v9"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== PENGALAMAN ===================== -->
+  <section class="blk exp" id="pengalaman">
+    <small data-i="el">PERTUMBUHAN &amp; PENGALAMAN</small>
+    <h2 data-i="et">Pengalaman &amp; Pelatihan</h2>
+    <p class="bio" data-i="es">Setiap pengalaman meninggalkan sebuah cerita. Kumpulan proses, tantangan, dan momen yang membentuk cara saya belajar, berkarya, dan terus berkembang.</p>
+    <div class="exp-list" id="expList"></div>
+  </section>
+
+  <!-- ===================== KONTEN ===================== -->
+  <!-- <section class="blk con" id="konten"> 
+    <small data-i="kl">KONTEN &amp; VIDEO</small>
+    <h2 data-i="kt">Video Pembelajaran &amp; Konten</h2>
+    <p class="bio" data-i="ks">Selain merancang dan membangun, saya juga suka membuat video pembelajaran dan konten edukatif. Berikut beberapa cuplikan kegiatan mengajar dan karya konten saya.</p>
+    <div class="con-grid" id="conGrid"></div>
+  </section> -->
+
+  <!-- ===================== KONTAK ===================== -->
+  <section class="blk contact" id="kontak">
+    <div class="contact-top">
+
+      <div class="contact-intro">
+        <small data-i="cl">HUBUNGI SAYA</small>
+        <h2 class="big-heading" data-i="ch">MARI BEKERJA SAMA</h2>
+        <p class="c-sub" data-i="csub">Mencari peluang berikutnya yang layak dikerjakan.</p>
+        <p class="bio" data-i="cbio">Terbuka untuk magang, beasiswa, dan proyek freelance di bidang EdTech.</p>
+        <a class="btn main" href="https://wa.me/6288295879512?text=Hello%20I%27m%20interested...!" target="_blank" rel="noopener" data-i="cbtn">Kirim Pesan &rarr;</a>
+      </div>
+
+      <div class="contact-cards">
+        <a class="c-card" href="mailto:maulidamilda26@gmail.com">
+          <span class="c-ic">&#9993;</span>
+          <div><small data-i="cemail">EMAIL</small><b>maulidamilda26@gmail.com</b></div>
+          <span class="c-no">01</span>
+        </a>
+        <a class="c-card" href="https://www.linkedin.com/in/mildamaulida" target="_blank" rel="noopener">
+          <span class="c-ic">in</span>
+          <div><small>LINKEDIN</small><b>linkedin.com/in/mildamaulida</b></div>
+          <span class="c-no">02</span>
+        </a>
+        <a class="c-card" href="https://github.com/Milmil26" target="_blank" rel="noopener">
+          <span class="c-ic">&#128187;</span>
+          <div><small>GITHUB</small><b>github.com/Milmil26</b></div>
+          <span class="c-no">03</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>© 2026 Milda Maulida</footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
